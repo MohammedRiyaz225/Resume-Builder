@@ -1,0 +1,97 @@
+* TEMPALTES*/
+.templates{
+background: var(--color-bg1);
+height: 29rem;
+}
+.templates h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.template__container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+  
+}
+.template__left{
+margin-left: 4rem;
+}
+.template__left p{
+margin: 1rem 0 3rem;
+}
+
+.template__right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+.template{
+    background: var(--color-bg2);
+    padding: 1rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.template:hover{
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0.3);
+    z-index: 1;
+}
+
+.template:nth-child(2) .templates__icon{
+    background-color: var(--color-danger);
+}
+.template:nth-child(3) .templates__icon{
+    background-color: var(--color-success);
+}
+.template:nth-child(4) .templates__icon{
+    background-color: var(--color-warning);
+}
+.template:nth-child(5) .templates__icon{
+    background-color: var(--color-success);
+}
+
+.templates__icon{
+    background: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+}
+
+.template h5{
+    margin: 2rem 0 1rem;
+}
+
+.template p{
+    font-size: 0.85rem;
+}
+
+/*==========DESIGNS=======*/
+
+.designs{
+    margin-top: 10rem;
+  
+
+}
+.designs__container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+.design{
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+
+}
+.design:hover{
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.design__info{
+    padding: 2rem;
+}
+.design__info p{
+    margin: 1.2rem 0 2rem;
+    font: size 0.9rem; ;
+}

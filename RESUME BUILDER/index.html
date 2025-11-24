@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <!--ICON SCOUT-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!--Font Moonserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+        <!--swipe up-->
+        <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container nav__container">
+            <a href="index.html">
+                <h4>RESU-MASTER</h4>
+            </a>
+            <ul class="nav__menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="template.html"> Templates</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <buttonv id="open-menu-btn"> <i class="uil uil-bars"></i></button>
+                <button id="close-menu-btn"> <i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    <!---END OF NAVBAR-->
+
+    <header>
+        <div class="container header__container">
+            <div class="header__left">
+                <h1> <b>Resu-Master</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Resume
+                    Builder – Your success path!"</h1>
+                <p>Our Resume Builder empowers you to enhance your career journey. It creates a tailored path for
+                    achieving your professional success.</p>
+                <a href="template.html" class="btn btn-primary">CREATE YOUR RESUME NOW </a>
+            </div>
+
+            <div class="header__right">
+                <div class="header__right-image">
+                    <img src="./IMAGES/design2.png">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!---END OF HEADER-->
+
+
+    <section class="templates">
+        <div class="container template__container">
+            <div class="template__left">
+                <h1>Template</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla earum non sequi dicta voluptate
+                    sapiente a tempora exercitationem alias, accusantium ullam vitae recusandae voluptatum autem quis
+                    ratione quisquam, soluta quam.</p>
+                <a href="#" class="btn"> CREATE MY RESUME</a>
+            </div>
+            <div class="template__right">
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>Chronological Resume</h5>
+                    <p>Lists work history in reverse order, starting with most recent job.</p>
+                </article>
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>Federal Resume</h5>
+                    <p>Detailed resume format for U.S. federal government job applications.</p>
+                </article>
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>CV (Curriculum Vitae)</h5>
+                    <p>Comprehensive document detailing education, research, publications, and academic achievements.
+                    </p>
+                </article>
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>Functional Resume</h5>
+                    <p>Emphasizes skills and qualifications over chronological work history in resume.</p>
+                </article>
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>Targeted Resume</h5>
+                    <p>Customized resume highlighting qualifications, skills, and experiences for a specific job.</p>
+                </article>
+                <article class="template">
+                    <span class="templates__icon"><i class="uil uil-file-shield-alt"></i> </span>
+                    <h5>Combination Resume</h5>
+                    <p>Blends skills, qualifications with chronological work history in the resume.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--END OF TEMPALATES-->
+
+
+    <section class="designs">
+        <h2>Recommended Templates</h2>
+        <div class="container  designs__container">
+            <article class="design">
+                <div class="design__image">
+                    <img src="./IMAGES/design1.avif" alt="" srcset="">
+                </div>
+                <div class="design__info">
+                    <h4>Dublin</h4>
+                    <p>A touch of personality with well-organized resume structure.</p>
+                    <a href="#" class="btn btn-primary">Use This Template</a>
+                </div>
+            </article>
+
+            <article class="design">
+                <div class="design__image">
+                    <img src="./IMAGES/design3.avif" alt="" srcset="">
+                </div>
+                <div class="design__info">
+                    <h4>London</h4>
+                    <p>A timeless layout that's spacious and symmetrical</p>
+                    <a href="#" class="btn btn-primary">Use This Template</a>
+                </div>
+            </article>
+
+            <article class="design">
+                <div class="design__image">
+                    <img src="./IMAGES/design4.avif" alt="" srcset="">
+                </div>
+                <div class="design__info">
+                    <h4>Moscow</h4>
+                    <p>Open white-space template, excellent readability</p>
+                    <a href="#" class="btn btn-primary">Use This Template</a>
+                </div>
+
+            </article>
+            
+        </div>
+        </div>
+    </section>
+    <!--end of designs-->
+
+    <!---asked question-->
+
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="container faqs__container">
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> What is Resu-Master’s mission?</h4>
+                    <p>ResumeHelp is devoted to helping you land meaningful employment with the encouragement and
+                        support of career development experts, recruiters and certified professional resume writers.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> Is Resu-Master’s builder free?</h4>
+                    <p>Yes, you can begin using ResumeHelp’s builder for free. However, to download, save and create
+                        multiple versions of your document. 
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> How can I make my resume stand out?</h4>
+                    <p>You can make your resume stand out by matching your skills to the job description. Employers will
+                        be impressed if you highlight your most relevant skills and experience. </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4>What is the best resume template?</h4>
+                    <p>The best resume template is the one that best serves your needs and purpose by offering a layout
+                        for your resume sections that’s easy for recruiters to follow. A good resume template should
+                        always include the five essential resume sections: contact information, resume summary or resume
+                        objective, work experience, skills and education.</p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> How long should a resume be?</h4>
+                    <p>As a general rule, most recruiters recommend resumes that are one-page long. A one-page resume is
+                        much easier and quicker to read and share with colleagues. However, in recent years, recruiters
+                        have become more flexible with page length in favor of resumes that genuinely capture a
+                        candidate’s qualifications. </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> What is a resume builder?</h4>
+                    <p>A resume builder is an online tool that generates a resume in less time than it takes to write it
+                        yourself. Resu-Master’s Resume Builder utilizes your desired job title and years of experience
+                        to
+                        suggest personalized content for all your resume sections, so your effort is minimal.</p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> How do I determine to Select Resume Skills?</h4>
+                    <p>The best way to determine which skills to use on your resume is to read the job description
+                        carefully and take note of which requirements match your skillset. List those skills on your
+                        resume, taking care to use a mix of soft and hard skills to convey that you are well-rounded.
+                    </p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> Should I customize my resume for each job?</h4>
+                    <p>Absolutely. You should customize your resume for each job to have the best chance of getting a
+                        callback for an interview. A one-size-fits-all resume is a myth, and will likely yield different
+                        results than you want. By customizing your resume for each job, you ensure that you highlight
+                        the skills and experiences the employer needs for that particular role.</p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> What if I need Resume or Account Help?</h4>
+                    <p>If you need help with your resume or help accessing or managing your account, you can contact us
+                        by phone, email or chat with one of our customer service representatives. Find all the ways to
+                        get in touch with us on our contact information page.</p>
+                </div>
+            </article>
+
+            <article class="faq">
+                <div class="faq__icon"><i class="uil uil-plus"></i></div>
+                <div class="question__answer">
+                    <h4> Is Resu-Master safe?</h4>
+                    <p>Resu-Master is an entirely safe resume and career advice website with the best Resume Builder and
+                        Cover Letter Builder. With Resu-Builder, you will find hundreds of helpful article resources,
+                        professional resume-writing services </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="conatiner testimonials__container mySwiper">
+        <h2>User's Testimonials</h2>
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./IMAGES/user.jpeg">
+                </div>
+                <div class="testimonial__info">
+                    <h5>ABCDDD DDDDD</h5>
+                    <small>User</small>
+                </div>
+                <div class="testimonial__body">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam praesentium, rem accusamus
+                        dolorum quae rerum! Quae ratione tempora accusamus nobis pariatur, consequatur amet accusantium
+                        distinctio impedit laudantium qui totam aperiam.</p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./IMAGES/user.jpeg">
+                </div>
+                <div class="testimonial__info">
+                    <h5>ABCDDD DDDDD</h5>
+                    <small>User</small>
+                </div>
+                <div class="testimonial__body">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam praesentium, rem accusamus
+                        dolorum quae rerum! Quae ratione tempora accusamus nobis pariatur, consequatur amet accusantium
+                        distinctio impedit laudantium qui totam aperiam.</p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./IMAGES/user.jpeg">
+                </div>
+                <div class="testimonial__info">
+                    <h5>ABCDDD DDDDD</h5>
+                    <small>User</small>
+                </div>
+                <div class="testimonial__body">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam praesentium, rem accusamus
+                        dolorum quae rerum! Quae ratione tempora accusamus nobis pariatur, consequatur amet accusantium
+                        distinctio impedit laudantium qui totam aperiam.</p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./IMAGES/user.jpeg">
+                </div>
+                <div class="testimonial__info">
+                    <h5>ABCDDD DDDDD</h5>
+                    <small>User</small>
+                </div>
+                <div class="testimonial__body">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam praesentium, rem accusamus
+                        dolorum quae rerum! Quae ratione tempora accusamus nobis pariatur, consequatur amet accusantium
+                        distinctio impedit laudantium qui totam aperiam.</p>
+                </div>
+            </article>
+
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./IMAGES/user.jpeg">
+                </div>
+                <div class="testimonial__info">
+                    <h5>ABCDDD DDDDD</h5>
+                    <small>User</small>
+                </div>
+                <div class="testimonial__body">
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam praesentium, rem accusamus
+                        dolorum quae rerum! Quae ratione tempora accusamus nobis pariatur, consequatur amet accusantium
+                        distinctio impedit laudantium qui totam aperiam.</p>
+                </div>
+            </article>
+            
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!---foooter section start-->
+<footer>
+    <div class="container footer__container">
+<div class="footer__1">
+    <a href="index.html" class="footer__logo"> <h4>RESU-MASTER</h4></a>
+    <P>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, eligendi.
+    </P>
+</div>
+
+<div class="footer__2">
+   <H4>Permalinks</H4>
+   <ul class="permalinks"></ul>
+   <li><a href="index.html"><Home/a></li>
+   <li><a href="about.html">About</a></li>
+   <li><a href="template.html">Templates</a></li>
+   <li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer__3">
+    <h4>Primacy</h4>
+    <ul class="privacy">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#"> Terms & Conditions</a></li>
+        <li><a href="#"> Refund Policy</a></li>
+    </ul>
+</div>
+<div class="footer__4">
+    <h4>Contact Us</h4>
+    <div>
+        <p>8483828283</p>
+        <p>resumaster@gmail.com</p>
+    </div>
+    <ul class="footer__socials">
+        <li>
+<a href="#"> <i class="uil uil-facebook"></i></a>
+        </li>
+        <li>
+            <i class="uil uil-instagram"></i>
+        </li>
+        <li>
+            <i class="uil uil-twitter-alt"></i>
+        </li>
+        <li>
+            <i class="uil uil-github"></i>
+        </li>
+    </ul>
+</div>
+<div class="footer__copyright">
+    <small>Copyright &copy;2023 Reserved </small>
+</div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="./main.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints:{
+            600:{
+                slidesPerView:2
+            }
+          }
+        });
+      </script>
+</body>
+
+</html>
