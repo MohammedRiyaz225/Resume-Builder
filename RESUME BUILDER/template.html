@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Templates | Resu-Master</title>
+    <meta name="description" content="Browse 50+ ATS-friendly, professionally designed resume templates. Filter by industry: Professional, Creative, or Academic.">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/template.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo__icon"><i class="uil uil-file-alt"></i></span>
+                <h4>RESU-MASTER</h4>
+            </a>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="template.html" class="active">Templates</a></li>
+                <li><a href="builder.html">Builder</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav__actions">
+                <a href="login.html" class="btn btn-outline-sm">Login</a>
+                <a href="registratin.html" class="btn btn-primary-sm">Sign Up</a>
+            </div>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="template-hero">
+        <div class="container template-hero__container">
+            <span class="section__badge">50+ Templates</span>
+            <h1>Find Your <span class="gradient-text">Perfect Template</span></h1>
+            <p>All templates are ATS-optimized, recruiter-approved, and downloadable as perfect PDFs. Choose a design that tells your story.</p>
+            <div class="template-search">
+                <div class="search-input-wrapper">
+                    <i class="uil uil-search"></i>
+                    <input type="text" id="template-search" placeholder="Search templates (e.g. modern, clean, executive...)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar sticky-filter">
+        <div class="container filter-bar__inner">
+            <div class="filter-groups">
+                <!-- Categories -->
+                <div class="filter-group">
+                    <span class="filter-label">Style:</span>
+                    <div class="filter-tabs" id="category-filters">
+                        <button class="filter-tab active" data-group="category" data-filter="all">All</button>
+                        <button class="filter-tab" data-group="category" data-filter="professional">Prof.</button>
+                        <button class="filter-tab" data-group="category" data-filter="creative">Creative</button>
+                        <button class="filter-tab" data-group="category" data-filter="modern">Modern</button>
+                    </div>
+                </div>
+                <!-- Roles -->
+                <div class="filter-group">
+                    <span class="filter-label">Role:</span>
+                    <div class="filter-tabs" id="role-filters">
+                        <button class="filter-tab active" data-group="role" data-filter="all">Any</button>
+                        <button class="filter-tab" data-group="role" data-filter="sde">Tech</button>
+                        <button class="filter-tab" data-group="role" data-filter="pm">PM</button>
+                        <button class="filter-tab" data-group="role" data-filter="consultant">Consulting</button>
+                    </div>
+                </div>
+                <!-- Companies -->
+                <div class="filter-group">
+                    <span class="filter-label">Target:</span>
+                    <div class="filter-tabs" id="company-filters">
+                        <button class="filter-tab active" data-group="company" data-filter="all">Any</button>
+                        <button class="filter-tab" data-group="company" data-filter="faang">FAANG</button>
+                        <button class="filter-tab" data-group="company" data-filter="startup">Startup</button>
+                    </div>
+                </div>
+            </div>
+            <div class="template-count">
+                <span id="count-display">46</span> templates
+            </div>
+        </div>
+    </div>
+
+    <!-- TEMPLATE GRID -->
+    <section class="template-gallery">
+        <div class="container">
+            <div class="template-grid" id="template-grid">
+
+                <!-- Template 1: Dublin Classic (SDE) -->
+                <article class="tpl-card" data-category="professional" data-role="sde" data-company="faang" data-name="Dublin Classic (SDE)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--dublin">
+                            <div class="tt-header">JOHN SMITH · Software Engineer · ✉ john@email.com · ☎ 555-0000</div>
+                            <div class="tt-section"><div class="tt-section-title">EXPERIENCE</div><div class="tt-line l80"></div><div class="tt-line l60"></div><div class="tt-line l70"></div></div>
+                            <div class="tt-section"><div class="tt-section-title">SKILLS</div><div class="tt-pills"><span>Python</span><span>React</span><span>AWS</span><span>Docker</span></div></div>
+                            <div class="tt-section"><div class="tt-section-title">EDUCATION</div><div class="tt-line l75"></div><div class="tt-line l50"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=dublin&role=sde" class="btn btn-primary"><i class="uil uil-edit-alt"></i> Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('dublin')"><i class="uil uil-eye"></i> Preview</button>
+                        </div>
+                        <div class="tpl-card__badge">Popular</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>Dublin Classic (SDE)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(2.1k)</span></div>
+                        </div>
+                        <p>Google-optimized software engineer format with strong technical focus.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag role">SDE</span><span class="tag company">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- Template 2: London Executive (PM) -->
+                <article class="tpl-card" data-category="professional" data-role="consultant" data-company="faang" data-name="London Executive (PM)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--london">
+                            <div class="tt-header-london"><div class="tt-name-serif">SARAH EVANS</div><div class="tt-title-serif">Product Manager</div><div class="tt-divider"></div><div class="tt-contact-center">📧 sarah@meta.com  ·  📞 (415) 000-0000  ·  San Francisco</div></div>
+                            <div class="tt-body-two-col"><div class="tt-col-left"><div class="tt-section-title-black">CONTACT</div><div class="tt-line l90"></div><div class="tt-line l70"></div></div><div class="tt-col-right"><div class="tt-section-title-black">EXPERIENCE</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-line l60"></div></div></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=london&role=pm" class="btn btn-primary"><i class="uil uil-edit-alt"></i> Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('london')"><i class="uil uil-eye"></i> Preview</button>
+                        </div>
+                        <div class="tpl-card__badge badge-new">New</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>London Executive (PM)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(1.5k)</span></div>
+                        </div>
+                        <p>Meta-style Product Management template emphasizing metrics and impact.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag role">PM</span><span class="tag company">Meta</span></div>
+                    </div>
+                </article>
+
+                <!-- Template 3: Moscow Minimal -->
+                <article class="tpl-card" data-category="minimal" data-role="sde" data-company="startup" data-name="Moscow Minimal (Dev)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--moscow">
+                            <div class="tt-header-moscow"><span>ALEX PETROV</span></div>
+                            <div class="tt-body-moscow">
+                                <div class="tt-moscow-label">EXPERIENCE</div><div class="tt-line l80"></div><div class="tt-line l60"></div>
+                                <div class="tt-moscow-label">EDUCATION</div><div class="tt-line l70"></div>
+                                <div class="tt-moscow-label">SKILLS</div><div class="tt-line l90"></div><div class="tt-line l50"></div>
+                            </div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=moscow&role=sde" class="btn btn-primary"><i class="uil uil-edit-alt"></i> Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('moscow')"><i class="uil uil-eye"></i> Preview</button>
+                        </div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>Moscow Minimal (Dev)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(940)</span></div>
+                        </div>
+                        <p>Lean startup format for full-stack developers and early-stage hires.</p>
+                        <div class="tpl-card__tags"><span class="tag minimal">Minimal</span><span class="tag role">SDE</span><span class="tag">Startup</span></div>
+                    </div>
+                </article>
+
+                <!-- Template 4: Spark Creative -->
+                <article class="tpl-card" data-category="creative" data-role="marketing" data-company="startup" data-name="Spark Creative (Mktg)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--spark">
+                            <div class="tt-spark-sidebar"><div class="tt-spark-name">MIA CHEN</div><div class="tt-spark-title">Marketing Lead</div><div class="tt-spark-divider"></div><div class="tt-spark-section">CONTACT</div><div class="tt-line-w l80"></div><div class="tt-line-w l60"></div><div class="tt-spark-section">SKILLS</div><div class="tt-line-w l70"></div><div class="tt-line-w l50"></div></div>
+                            <div class="tt-spark-main"><div class="tt-spark-h">EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l65"></div><div class="tt-line l75"></div><div class="tt-spark-h">EDUCATION</div><div class="tt-line l70"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=spark&role=marketing" class="btn btn-primary"><i class="uil uil-edit-alt"></i> Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('spark')"><i class="uil uil-eye"></i> Preview</button>
+                        </div>
+                        <div class="tpl-card__badge badge-hot">Hot</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>Spark Creative (Mktg)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(1.2k)</span></div>
+                        </div>
+                        <p>Vibrant layout for growth marketers and brand specialists.</p>
+                        <div class="tpl-card__tags"><span class="tag creative">Creative</span><span class="tag role">Marketing</span><span class="tag">Startup</span></div>
+                    </div>
+                </article>
+
+                <!-- McKinsey Style -->
+                <article class="tpl-card" data-category="professional" data-role="consultant" data-company="mbb" data-name="The Consultant (McKinsey)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--mckinsey">
+                            <div class="tt-mck-name">JAMES THORNTON</div>
+                            <div class="tt-mck-title">Management Consultant</div>
+                            <div class="tt-mck-line"></div>
+                            <div class="tt-body-two-col">
+                                <div class="tt-col-left"><div class="tt-mck-label">CONTACT</div><div class="tt-line l90"></div><div class="tt-line l75"></div><div class="tt-mck-label" style="margin-top:6px">EDUCATION</div><div class="tt-line l80"></div></div>
+                                <div class="tt-col-right"><div class="tt-mck-label">EXPERIENCE</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-line l70"></div><div class="tt-mck-label" style="margin-top:6px">SKILLS</div><div class="tt-line l85"></div></div>
+                            </div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=mckinsey" class="btn btn-primary">Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('mckinsey')">Preview</button>
+                        </div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>The Consultant (McKinsey)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 5.0</span><span class="reviews">(3.4k)</span></div>
+                        </div>
+                        <p>Strictly professional MBB format. Emphasizes structured problem-solving.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">MBB</span></div>
+                    </div>
+                </article>
+
+                <!-- Goldman Sachs Style -->
+                <article class="tpl-card" data-category="professional" data-role="ib" data-company="finance" data-name="Wall Street (Goldman)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--goldman">
+                            <div class="tt-goldman-name">EMILY ROTHSTEIN</div>
+                            <div class="tt-goldman-edu">Harvard University · M.B.A · GPA 3.98</div>
+                            <div class="tt-goldman-divider"></div>
+                            <div class="tt-goldman-label">EXPERIENCE</div><div class="tt-g-line l90"></div><div class="tt-g-line l85"></div><div class="tt-g-line l75"></div><div class="tt-g-line l80"></div>
+                            <div class="tt-goldman-label">SKILLS & INTERESTS</div><div class="tt-g-line l95"></div><div class="tt-g-line l60"></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=goldman" class="btn btn-primary">Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('goldman')">Preview</button>
+                        </div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Wall Street (Goldman)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(1.8k)</span></div></div>
+                        <p>Classic Investment Banking layout. Ultra-formal and data-dense.</p>
+                        <div class="tpl-card__tags"><span class="tag">Finance</span><span class="tag">Formal</span></div>
+                    </div>
+                </article>
+
+                <!-- Amazon Style PM -->
+                <article class="tpl-card" data-category="modern" data-role="pm" data-company="faang" data-name="Leadership Principles (Amazon)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--amazon">
+                            <div class="tt-amazon-header"><div class="tt-amazon-name">RAJ PATEL</div><div class="tt-amazon-role">Senior Product Manager · AWS</div></div>
+                            <div class="tt-amazon-body">
+                                <div class="tt-amazon-label">▸ EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l75"></div><div class="tt-line l65"></div>
+                                <div class="tt-amazon-label">▸ EDUCATION</div><div class="tt-line l70"></div>
+                                <div class="tt-amazon-label">▸ SKILLS</div><div class="tt-amazon-pills"><span>Agile</span><span>KPI</span><span>SQL</span></div>
+                            </div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=amazon" class="btn btn-primary">Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('amazon')">Preview</button>
+                        </div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Leadership Principles (Amazon)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(760)</span></div></div>
+                        <p>AWS/Retail styled PM format. Focuses heavily on customer obsession.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- Apple Style Creative -->
+                <article class="tpl-card" data-category="minimal" data-role="creative-dir" data-company="faang" data-name="Silicon Valley (Apple)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--apple">
+                            <div class="tt-apple-name">Priya Nair</div>
+                            <div class="tt-apple-role">Product Designer · UX Lead</div>
+                            <div class="tt-apple-line"></div>
+                            <div class="tt-apple-row"><span class="tt-apple-label">Experience</span><div><div class="tt-line l80"></div><div class="tt-line l60"></div></div></div>
+                            <div class="tt-apple-row"><span class="tt-apple-label">Education</span><div><div class="tt-line l70"></div></div></div>
+                            <div class="tt-apple-row"><span class="tt-apple-label">Skills</span><div><div class="tt-line l85"></div></div></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=apple" class="btn btn-primary">Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('apple')">Preview</button>
+                        </div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Silicon Valley (Apple)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.6</span><span class="reviews">(620)</span></div></div>
+                        <p>Sleek, premium, and minimalist. Perfect for high-end Product Designers.</p>
+                        <div class="tpl-card__tags"><span class="tag minimal">Minimal</span><span class="tag">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- Overleaf Academic -->
+                <article class="tpl-card" data-category="minimal academic" data-role="tech academic" data-company="research university" data-name="Overleaf Academic (LaTeX)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--overleaf">
+                            <div class="tt-overleaf-name">DR. AMIR HASSAN</div>
+                            <div class="tt-overleaf-info">a.hassan@university.edu · ORCID: 0000-0001</div>
+                            <div class="tt-overleaf-rule"></div>
+                            <div class="tt-overleaf-section">RESEARCH INTERESTS</div><div class="tt-ol-line l90"></div>
+                            <div class="tt-overleaf-section">PUBLICATIONS</div><div class="tt-ol-line l95"></div><div class="tt-ol-line l80"></div><div class="tt-ol-line l70"></div>
+                            <div class="tt-overleaf-section">EDUCATION</div><div class="tt-ol-line l85"></div><div class="tt-ol-line l65"></div>
+                        </div>
+                        <div class="tpl-card__overlay">
+                            <a href="builder.html?template=overleaf&role=academic" class="btn btn-primary">Use Template</a>
+                            <button class="tpl-preview-btn" onclick="openThumbPreview('overleaf')"><i class="uil uil-eye"></i> Preview</button>
+                        </div>
+                        <div class="tpl-card__badge">Academic</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header">
+                            <h4>Overleaf Academic (LaTeX)</h4>
+                            <div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(850)</span></div>
+                        </div>
+                        <p>Strictly minimalist LaTeX-style format for researchers and deep-tech engineers.</p>
+                        <div class="tpl-card__tags"><span class="tag minimal">Minimal</span><span class="tag academic">Academic</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: UX Designer Portfolio -->
+                <article class="tpl-card" data-category="creative" data-role="ux" data-company="faang" data-name="UX Designer Portfolio">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--ux">
+                            <div class="tt-ux-header"><div class="tt-ux-circle"></div><div><div class="tt-ux-name">LUNA PARKS</div><div class="tt-ux-role">UX / Product Designer</div></div></div>
+                            <div class="tt-ux-body"><div class="tt-ux-h">PROJECTS</div><div class="tt-line l90"></div><div class="tt-line l75"></div><div class="tt-ux-h">SKILLS</div><div class="tt-ux-chips"><span>Figma</span><span>Sketch</span><span>CSS</span></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=ux" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('ux')">Preview</button></div>
+                        <div class="tpl-card__badge badge-new">New</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>UX Designer Portfolio</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(1.1k)</span></div></div>
+                        <p>Project-focused portfolio resume for UX/UI designers targeting top product companies.</p>
+                        <div class="tpl-card__tags"><span class="tag creative">Creative</span><span class="tag">Design</span><span class="tag company">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Data Scientist -->
+                <article class="tpl-card" data-category="modern" data-role="ds" data-company="faang" data-name="Neural Net (Data Scientist)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--ds">
+                            <div class="tt-ds-header"><div class="tt-ds-name">DR. VIKRAM RAO</div><div class="tt-ds-role">Data Scientist · ML Engineer</div></div>
+                            <div class="tt-ds-body"><div class="tt-ds-label">▸ CORE SKILLS</div><div class="tt-ds-chips"><span>Python</span><span>TensorFlow</span><span>SQL</span></div><div class="tt-ds-label">▸ EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l70"></div><div class="tt-ds-label">▸ EDUCATION</div><div class="tt-line l75"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=ds&role=ds" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('ds')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Neural Net (Data Scientist)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(980)</span></div></div>
+                        <p>ML and Data Science focused resume with teal accent, skill-first layout.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag role">Data Sci</span><span class="tag company">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: HR Manager -->
+                <article class="tpl-card" data-category="professional" data-role="hr" data-company="startup" data-name="People First (HR Manager)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--hr">
+                            <div class="tt-hr-header"><div class="tt-hr-name">PRIYA SINGH</div><div class="tt-hr-role">Human Resources Manager</div><div class="tt-hr-contact">priya@company.com · LinkedIn</div></div>
+                            <div class="tt-hr-body"><div class="tt-hr-label">EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l70"></div><div class="tt-hr-label">SKILLS</div><div class="tt-line l90"></div><div class="tt-hr-label">EDUCATION</div><div class="tt-line l75"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=hr" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('hr')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>People First (HR Manager)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.6</span><span class="reviews">(540)</span></div></div>
+                        <p>Warm and professional HR resume with peachy accents and structured sections.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">HR</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Nurse / Healthcare -->
+                <article class="tpl-card" data-category="professional" data-role="healthcare" data-company="hospital" data-name="Clinical Care (Nurse)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--nurse">
+                            <div class="tt-nurse-header"><div class="tt-nurse-name">SARAH CROSS, RN</div><div class="tt-nurse-role">Registered Nurse · ICU</div></div>
+                            <div class="tt-nurse-body"><div class="tt-nurse-label">CERTIFICATIONS</div><div class="tt-line l80"></div><div class="tt-line l60"></div><div class="tt-nurse-label">CLINICAL EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l70"></div><div class="tt-nurse-label">EDUCATION</div><div class="tt-line l75"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=nurse" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('nurse')">Preview</button></div>
+                        <div class="tpl-card__badge badge-new">New</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Clinical Care (Nurse)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(430)</span></div></div>
+                        <p>Clean clinical resume with blue/teal accents for nursing and healthcare professionals.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Healthcare</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Sales Executive -->
+                <article class="tpl-card" data-category="modern" data-role="sales" data-company="startup" data-name="Close the Deal (Sales)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--sales">
+                            <div class="tt-sales-header"><div class="tt-sales-name">MARCUS FORD</div><div class="tt-sales-role">Senior Sales Executive</div></div>
+                            <div class="tt-sales-body"><div class="tt-sales-kpi"><span>$4.2M</span><span>Revenue</span></div><div class="tt-sales-kpi"><span>120%</span><span>Quota</span></div><div class="tt-sales-label">EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l70"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=sales" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('sales')">Preview</button></div>
+                        <div class="tpl-card__badge badge-hot">Hot</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Close the Deal (Sales)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(720)</span></div></div>
+                        <p>Bold metrics-first resume for B2B and enterprise sales professionals.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">Sales</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: CTO / Engineering Leader -->
+                <article class="tpl-card" data-category="professional" data-role="executive" data-company="faang" data-name="Executive Tech Leader (CTO)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--cto">
+                            <div class="tt-cto-header"><div class="tt-cto-name">DANIEL CHEN</div><div class="tt-cto-role">Chief Technology Officer</div><div class="tt-cto-sub">15 yrs · 200+ engineers led</div></div>
+                            <div class="tt-cto-body"><div class="tt-cto-label">LEADERSHIP HIGHLIGHTS</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-cto-label">TECHNICAL VISION</div><div class="tt-line l85"></div><div class="tt-line l70"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=cto" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('cto')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Executive Tech Leader (CTO)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(1.3k)</span></div></div>
+                        <p>Premium executive format for CTOs and VPs of Engineering. Dark authority style.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Executive</span><span class="tag company">FAANG</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Startup Founder -->
+                <article class="tpl-card" data-category="modern" data-role="founder" data-company="startup" data-name="Founder Mode (Startup)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--founder">
+                            <div class="tt-founder-header"><div class="tt-f-avatar">F</div><div><div class="tt-f-name">ALEX RIVERS</div><div class="tt-f-role">Founder & CEO · Y Combinator</div></div></div>
+                            <div class="tt-founder-body"><div class="tt-f-h">VENTURES</div><div class="tt-line l80"></div><div class="tt-line l65"></div><div class="tt-f-h">IMPACT</div><div class="tt-line l75"></div><div class="tt-f-h">SKILLS</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=founder" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('founder')">Preview</button></div>
+                        <div class="tpl-card__badge badge-hot">Hot</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Founder Mode (Startup)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(590)</span></div></div>
+                        <p>Bold dark-mode resume for founders and entrepreneurs targeting investors and boards.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">Startup</span><span class="tag">Founder</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: College Fresh Grad -->
+                <article class="tpl-card" data-category="modern" data-role="fresher" data-company="startup" data-name="Campus to Career (Fresher)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--fresher">
+                            <div class="tt-fr-header"><div class="tt-fr-name">AMELIA JONES</div><div class="tt-fr-role">Computer Science Graduate 2025</div></div>
+                            <div class="tt-fr-body"><div class="tt-fr-label">EDUCATION</div><div class="tt-line l90"></div><div class="tt-line l70"></div><div class="tt-fr-label">PROJECTS</div><div class="tt-line l80"></div><div class="tt-line l65"></div><div class="tt-fr-label">SKILLS</div><div class="tt-fr-chips"><span>Python</span><span>React</span></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=fresher" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('fresher')">Preview</button></div>
+                        <div class="tpl-card__badge badge-new">New</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Campus to Career (Fresher)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(2.4k)</span></div></div>
+                        <p>Perfect for fresh graduates and students — emphasizes projects, internships, and skills.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">Fresher</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Finance / Banking Analyst -->
+                <article class="tpl-card" data-category="professional" data-role="ib" data-company="finance" data-name="Capital Markets Analyst">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--finance">
+                            <div class="tt-fin-header"><div class="tt-fin-name">OLIVIA GRANT</div><div class="tt-fin-role">Financial Analyst · CFA Level III</div></div>
+                            <div class="tt-fin-body"><div class="tt-fin-label">PROFESSIONAL SUMMARY</div><div class="tt-line l90"></div><div class="tt-line l75"></div><div class="tt-fin-label">WORK EXPERIENCE</div><div class="tt-line l85"></div><div class="tt-line l65"></div><div class="tt-fin-label">SKILLS</div><div class="tt-fin-chips"><span>Excel</span><span>Bloomberg</span></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=finance" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('finance')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Capital Markets Analyst</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(680)</span></div></div>
+                        <p>Sharp two-tone navy blue format for financial analysts and capital markets professionals.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Finance</span></div>
+                    </div>
+                <!-- NEW: Google SDE -->
+                <article class="tpl-card" data-category="professional" data-role="sde" data-company="google" data-name="Mountain View (Google)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--google">
+                            <div class="tt-go-header"><div class="tt-go-name">CHRIS MILLER</div><div class="tt-go-role">Software Engineer III</div></div>
+                            <div class="tt-go-body"><div class="tt-go-h">EXPERIENCE</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-go-h">EDUCATION</div><div class="tt-line l85"></div><div class="tt-go-h">PROJECTS</div><div class="tt-line l70"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=google" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('google')">Preview</button></div>
+                        <div class="tpl-card__badge badge-hot">Popular</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Mountain View (Google)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(3.2k)</span></div></div>
+                        <p>Branded professional layout optimized for big tech applications with balanced spacing.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">Google</span><span class="tag">SDE</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Meta Product Designer -->
+                <article class="tpl-card" data-category="creative" data-role="ux" data-company="meta" data-name="Horizon (Meta UX)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--meta">
+                            <div class="tt-mt-header"><div class="tt-mt-logo">M</div><div><div class="tt-mt-name">JORDAN LEE</div><div class="tt-mt-role">Product Designer</div></div></div>
+                            <div class="tt-mt-body"><div class="tt-mt-h">CASE STUDIES</div><div class="tt-line l85"></div><div class="tt-line l75"></div><div class="tt-mt-h">SKILLS</div><div class="tt-mt-chips"><span>Product</span><span>AR/VR</span></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=meta" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('meta')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Horizon (Meta UX)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(1.1k)</span></div></div>
+                        <p>Modern creative layout for product designers focusing on case studies and impact metrics.</p>
+                        <div class="tpl-card__tags"><span class="tag creative">Creative</span><span class="tag company">Meta</span><span class="tag">UX</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Amazon SDE -->
+                <article class="tpl-card" data-category="professional" data-role="sde" data-company="amazon" data-name="Day One (Amazon)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--amazon2">
+                            <div class="tt-am-header"><div class="tt-am-name">EMMA WATSON</div><div class="tt-am-role">Senior SDE · Cloud Architect</div></div>
+                            <div class="tt-am-body"><div class="tt-am-h">leadership principles</div><div class="tt-line l95"></div><div class="tt-line l85"></div><div class="tt-am-h">technical depth</div><div class="tt-line l90"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=amazon2" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('amazon2')">Preview</button></div>
+                        <div class="tpl-card__badge badge-hot">Hot</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Day One (Amazon)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(2.1k)</span></div></div>
+                        <p>Leadership-principle focused design for Amazon and AWS technical applicants.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">Amazon</span><span class="tag">SDE</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Apple Designer -->
+                <article class="tpl-card" data-category="minimal" data-role="design" data-company="apple" data-name="Cupertino (Apple)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--apple2">
+                            <div class="tt-ap-name">SARA IVE</div>
+                            <div class="tt-ap-role">Product Designer</div>
+                            <div class="tt-ap-body"><div class="tt-line l80"></div><div class="tt-line l90"></div><div class="tt-line l70"></div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=apple2" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('apple2')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Cupertino (Apple)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(950)</span></div></div>
+                        <p>Ultra-minimalist, white-space heavy design inspired by Apple's aesthetic.</p>
+                        <div class="tpl-card__tags"><span class="tag minimal">Minimal</span><span class="tag company">Apple</span><span class="tag">Design</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Netflix Content -->
+                <article class="tpl-card" data-category="modern" data-role="marketing" data-company="netflix" data-name="Streamline (Netflix)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--netflix">
+                            <div class="tt-nf-header"><div class="tt-nf-name">SAM RIVERS</div><div class="tt-nf-role">Content Strategist</div></div>
+                            <div class="tt-nf-body"><div class="tt-nf-bold">IMPACT</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-nf-bold">STRATEGY</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=netflix" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('netflix')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Streamline (Netflix)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.6</span><span class="reviews">(420)</span></div></div>
+                        <p>Bold red and black design focused on content strategy and marketing leadership.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag company">Netflix</span><span class="tag">Marketing</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Tesla Engineer -->
+                <article class="tpl-card" data-category="professional" data-role="engineering" data-company="tesla" data-name="Cyber (Tesla)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--tesla">
+                            <div class="tt-ts-header"><div class="tt-ts-name">ELON MILLER</div><div class="tt-ts-role">Principal Systems Engineer</div></div>
+                            <div class="tt-ts-body"><div class="tt-ts-label">TECHNICAL INVENTORY</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-ts-label">PATENTS & PAPERS</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=tesla" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('tesla')">Preview</button></div>
+                        <div class="tpl-card__badge badge-new">New</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Cyber (Tesla)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(1.5k)</span></div></div>
+                        <p>Angular, high-tech industrial design for engineering and manufacturing roles.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">Tesla</span><span class="tag">Engineering</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Microsoft PM -->
+                <article class="tpl-card" data-category="professional" data-role="pm" data-company="microsoft" data-name="Azure (Microsoft)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--microsoft">
+                            <div class="tt-ms-header"><div class="tt-ms-name">KATE ADAMS</div><div class="tt-ms-role">Senior Product Manager</div></div>
+                            <div class="tt-ms-body"><div class="tt-ms-label">PRODUCT VISION</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-ms-label">TEAM LEADERSHIP</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=microsoft" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('microsoft')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Azure (Microsoft)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(830)</span></div></div>
+                        <p>Clean, blue-tinted professional design for product management and cloud roles.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">Microsoft</span><span class="tag">PM</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: SpaceX Engineer -->
+                <article class="tpl-card" data-category="professional" data-role="engineering" data-company="spacex" data-name="Ignition (SpaceX)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--spacex">
+                            <div class="tt-sx-header"><div class="tt-sx-name">MARS FORD</div><div class="tt-sx-role">Propulsion Engineer</div></div>
+                            <div class="tt-sx-body"><div class="tt-sx-label">MISSION EXPERIENCE</div><div class="tt-line l95"></div><div class="tt-line l85"></div><div class="tt-sx-label">FLIGHT HARDWARE</div><div class="tt-line l90"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=spacex" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('spacex')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Ignition (SpaceX)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(2.4k)</span></div></div>
+                        <p>High-contrast, mission-focused engineering resume for aerospace and deep tech.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">SpaceX</span><span class="tag">Engineering</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Morgan Stanley Associate -->
+                <article class="tpl-card" data-category="professional" data-role="ib" data-company="finance" data-name="Morgan Stanley Heritage">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--morgan">
+                            <div class="tt-mo-header"><div class="tt-mo-name">ALICE MORGAN</div><div class="tt-mo-role">IB Associate · Mergers & Acquisitions</div></div>
+                            <div class="tt-mo-body"><div class="tt-mo-label">DEAL EXPERIENCE</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-mo-label">FINANCIAL MODELING</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=finance&role=ib" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('morgan')">Preview</button></div>
+                        <div class="tpl-card__badge badge-hot">Banker Favorite</div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Morgan Stanley Heritage</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(1.9k)</span></div></div>
+                        <p>Dense, academic finance format with navy blue accents and deal-focused layout.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">IB</span><span class="tag">Finance</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Salesforce Executive -->
+                <article class="tpl-card" data-category="modern" data-role="sales" data-company="startup" data-name="Cloud Cloud (Salesforce)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--salesforce">
+                            <div class="tt-sf-header"><div class="tt-sf-name">BEN CLOUD</div><div class="tt-sf-role">Strategic Account Executive</div></div>
+                            <div class="tt-sf-body"><div class="tt-sf-label">CUSTOMER SUCCESS</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-sf-label">REVENUE GROWTH</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=salesforce" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('salesforce')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Cloud Cloud (Salesforce)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(760)</span></div></div>
+                        <p>Modern, cloud-inspired design for sales and customer success professionals.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">Sales</span><span class="tag">Success</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Spotify Engineer -->
+                <article class="tpl-card" data-category="modern" data-role="ds" data-company="spotify" data-name="Spotify Beat (Data Eng)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--spotify">
+                            <div class="tt-sp-header"><div class="tt-sp-name">MELODY DATA</div><div class="tt-sp-role">Senior Data Engineer</div></div>
+                            <div class="tt-sp-body"><div class="tt-sp-label">DATA PIPELINES</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-sp-label">INFRASTRUCTURE</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=spotify" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('spotify')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Spotify Beat (Data Eng)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(650)</span></div></div>
+                        <p>Vibrant green and black design for data engineers and music-tech fans.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag company">Spotify</span><span class="tag">Data Sci</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Nvidia Researcher -->
+                <article class="tpl-card" data-category="academic" data-role="ds" data-company="nvidia" data-name="Nvidia GPU Compute (AI)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--nvidia">
+                            <div class="tt-nv-header"><div class="tt-nv-name">JENSEN AI</div><div class="tt-nv-role">Senior AI Research Scientist</div></div>
+                            <div class="tt-nv-body"><div class="tt-nv-label">PUBLICATIONS</div><div class="tt-line l95"></div><div class="tt-line l85"></div><div class="tt-nv-label">COMPUTE MODELS</div><div class="tt-line l90"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=nvidia" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('nvidia')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Nvidia GPU Compute (AI)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(3.4k)</span></div></div>
+                        <p>Technical research-focused layout for AI, ML, and GPU compute specialists.</p>
+                        <div class="tpl-card__tags"><span class="tag academic">Academic</span><span class="tag company">Nvidia</span><span class="tag">Data Sci</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: BCG Strategic -->
+                <article class="tpl-card" data-category="professional" data-role="consultant" data-company="faang" data-name="BCG Strategic (Impact)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--bcg">
+                            <div class="tt-bcg-header"><div class="tt-bcg-name">CASEY STRATEGY</div><div class="tt-bcg-role">Management Consultant</div></div>
+                            <div class="tt-bcg-body"><div class="tt-bcg-label">STRATEGIC PILLARS</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-bcg-label">QUANTITATIVE IMPACT</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=bcg" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('bcg')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>BCG Strategic (Impact)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(1.2k)</span></div></div>
+                        <p>Case-study friendly layout emphasizing strategic frameworks and ROI.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Consultant</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: JP Morgan Elite -->
+                <article class="tpl-card" data-category="professional" data-role="finance" data-company="faang" data-name="J.P. Morgan Elite (IB)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--jpm">
+                            <div class="tt-jpm-header"><div class="tt-jpm-name">MORGAN BANKER</div><div class="tt-jpm-role">Investment Banking Analyst</div></div>
+                            <div class="tt-jpm-body"><div class="tt-jpm-label">TRANSACTION EXPERIENCE</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-jpm-label">FINANCIAL MODELING</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=jpm" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('jpm')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>J.P. Morgan Elite (IB)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.8</span><span class="reviews">(2.8k)</span></div></div>
+                        <p>Prestige Wall Street format for M&A and high-stakes finance roles.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Finance</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Uber Operations -->
+                <article class="tpl-card" data-category="modern" data-role="pm" data-company="faang" data-name="Uber Ops (Scale)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--uber">
+                            <div class="tt-ub-header"><div class="tt-ub-name">TRAVIS SCALE</div><div class="tt-ub-role">Operations Manager</div></div>
+                            <div class="tt-ub-body"><div class="tt-ub-label">EFFICIENCY METRICS</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-ub-label">MARKET LAUNCH</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=uber" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('uber')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Uber Ops (Scale)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(900)</span></div></div>
+                        <p>Data-driven layout focused on operations, logistics, and scaling.</p>
+                        <div class="tpl-card__tags"><span class="tag modern">Modern</span><span class="tag">Product</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Airbnb Creative -->
+                <article class="tpl-card" data-category="creative" data-role="ux" data-company="faang" data-name="Airbnb Host (Creative)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--airbnb">
+                            <div class="tt-ab-header"><div class="tt-ab-logo">A</div><div class="tt-ab-name">BRIAN DESIGN</div><div class="tt-ab-role">Senior Product Designer</div></div>
+                            <div class="tt-ab-body"><div class="tt-ab-label">USER JOURNEY</div><div class="tt-line l95"></div><div class="tt-line l85"></div><div class="tt-ab-label">PROTOTYPING</div><div class="tt-line l90"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=airbnb" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('airbnb')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Airbnb Host (Creative)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.9</span><span class="reviews">(1.5k)</span></div></div>
+                        <p>Beautiful, minimalist design inspired by the Airbnb guest experience.</p>
+                        <div class="tpl-card__tags"><span class="tag creative">Creative</span><span class="tag company">Airbnb</span><span class="tag">UX</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Boeing Aerospace -->
+                <article class="tpl-card" data-category="professional" data-role="sde" data-company="faang" data-name="Boeing Skyward (Aero)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--boeing">
+                            <div class="tt-bo-header"><div class="tt-bo-name">SKYLER WINGS</div><div class="tt-bo-role">Aerospace Systems Engineer</div></div>
+                            <div class="tt-bo-body"><div class="tt-bo-label">SYSTEMS DESIGN</div><div class="tt-line l90"></div><div class="tt-line l80"></div><div class="tt-bo-label">SAFETY PROTOCOLS</div><div class="tt-line l85"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=boeing" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('boeing')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Boeing Skyward (Aero)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.6</span><span class="reviews">(540)</span></div></div>
+                        <p>Robust engineering format for aerospace, aviation, and defense sectors.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag">Engineering</span></div>
+                    </div>
+                </article>
+
+                <!-- NEW: Intel Hardware -->
+                <article class="tpl-card" data-category="professional" data-role="sde" data-company="faang" data-name="Intel Silicon (Hard)">
+                    <div class="tpl-card__image">
+                        <div class="tpl-thumb tpl-thumb--intel">
+                            <div class="tt-in-header"><div class="tt-in-name">GORDON CHIP</div><div class="tt-in-role">Hardware Design Engineer</div></div>
+                            <div class="tt-in-body"><div class="tt-in-label">CHIP ARCHITECTURE</div><div class="tt-line l95"></div><div class="tt-line l85"></div><div class="tt-in-label">NANOSCALE DESIGN</div><div class="tt-line l90"></div></div>
+                        </div>
+                        <div class="tpl-card__overlay"><a href="builder.html?template=intel" class="btn btn-primary">Use Template</a><button class="tpl-preview-btn" onclick="openThumbPreview('intel')">Preview</button></div>
+                    </div>
+                    <div class="tpl-card__info">
+                        <div class="tpl-card__header"><h4>Intel Silicon (Hard)</h4><div class="tpl-rating"><span class="stars"><i class="uil uil-star"></i> 4.7</span><span class="reviews">(820)</span></div></div>
+                        <p>Deeply technical layout for hardware engineers and silicon architects.</p>
+                        <div class="tpl-card__tags"><span class="tag professional">Professional</span><span class="tag company">Intel</span><span class="tag">Engineering</span></div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- No results -->
+            <div class="no-results" id="no-results" style="display:none;">
+                <i class="uil uil-search-alt"></i>
+                <h3>No templates found</h3>
+                <p>Try a different filter or search term.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="cta-section">
+        <div class="container cta__container">
+            <div class="cta__content reveal">
+                <h2>Can't Find the Right Template?</h2>
+                <p>Start with our builder and we'll suggest the best template based on your industry and experience.</p>
+                <a href="builder.html" class="btn btn-primary btn-large"><i class="uil uil-magic-wand"></i> Let the Builder Choose</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer__container">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><i class="uil uil-file-alt"></i><h4>RESU-MASTER</h4></a>
+                <p>Your trusted partner in crafting professional resumes that open doors to your dream career.</p>
+                <ul class="footer__socials">
+                    <li><a href="#"><i class="uil uil-facebook"></i></a></li>
+                    <li><a href="#"><i class="uil uil-instagram"></i></a></li>
+                    <li><a href="#"><i class="uil uil-twitter-alt"></i></a></li>
+                    <li><a href="#"><i class="uil uil-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__2">
+                <h4>Quick Links</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="template.html">Templates</a></li>
+                    <li><a href="builder.html">Builder</a></li>
+                </ul>
+            </div>
+            <div class="footer__3">
+                <h4>Legal</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div class="footer__contact-info">
+                    <p><i class="uil uil-phone"></i> +91 848-382-8283</p>
+                    <p><i class="uil uil-envelope"></i> resumaster@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <small>Copyright &copy; 2025 Resu-Master. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <!-- PREVIEW LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <div class="lightbox__content" onclick="event.stopPropagation()">
+            <button class="lightbox__close" onclick="closeLightbox()"><i class="uil uil-times"></i></button>
+            <div id="lightbox-thumb-container" style="width: 100%; height: 500px; background: #fff; overflow-y: auto;"></div>
+            <div class="lightbox__footer">
+                <h4 id="lightbox-title"></h4>
+                <a id="lightbox-use" href="builder.html" class="btn btn-primary"><i class="uil uil-edit-alt"></i> Use This Template</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP -->
+    <button id="scroll-top"><i class="uil uil-angle-up"></i></button>
+
+    <script src="./main.js"></script>
+    <script>
+        /* ---- Multi-Category Filtering Logic ---- */
+        const filterGroups = {
+            category: 'all',
+            role: 'all',
+            company: 'all'
+        };
+
+        const tabs = document.querySelectorAll('.filter-tab');
+        const cards = document.querySelectorAll('.tpl-card');
+        const countDisplay = document.getElementById('count-display');
+        const noResults = document.getElementById('no-results');
+
+        function filterTemplates() {
+            const search = document.getElementById('template-search').value.toLowerCase();
+            let visible = 0;
+
+            cards.forEach(card => {
+                const cat = card.dataset.category || 'all';
+                const role = card.dataset.role || 'all';
+                const comp = card.dataset.company || 'all';
+                const name = card.dataset.name.toLowerCase();
+
+                const matchCat = filterGroups.category === 'all' || cat === filterGroups.category;
+                const matchRole = filterGroups.role === 'all' || role === filterGroups.role;
+                const matchComp = filterGroups.company === 'all' || comp === filterGroups.company;
+                const matchSearch = !search || name.includes(search) || cat.includes(search) || role.includes(search);
+
+                const show = matchCat && matchRole && matchComp && matchSearch;
+                card.style.display = show ? '' : 'none';
+                if (show) {
+                    card.style.animation = 'cardAppear 0.4s ease forwards';
+                    visible++;
+                }
+            });
+            countDisplay.textContent = visible;
+            noResults.style.display = visible === 0 ? 'flex' : 'none';
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const group = tab.dataset.group;
+                const filter = tab.dataset.filter;
+
+                // Update active state for THIS group only
+                document.querySelectorAll(`.filter-tab[data-group="${group}"]`).forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update group state
+                filterGroups[group] = filter;
+                filterTemplates();
+            });
+        });
+
+        document.getElementById('template-search').addEventListener('input', filterTemplates);
+
+        /* ---- Lightbox with Thumbnails ---- */
+        function openThumbPreview(templateName) {
+            const card = document.querySelector(`.tpl-thumb--${templateName}`);
+            if (!card) return;
+            
+            const container = document.getElementById('lightbox-thumb-container');
+            container.innerHTML = card.outerHTML;
+            
+            // Adjust the cloned thumbnail for a larger view in lightbox
+            const clone = container.querySelector('.tpl-thumb');
+            clone.style.width = '100%';
+            clone.style.height = '100%';
+            clone.style.transform = 'scale(1)';
+            clone.style.padding = '40px';
+            clone.style.fontSize = '1.2rem';
+
+            document.getElementById('lightbox-title').textContent = templateName.toUpperCase() + ' DESIGN';
+            document.getElementById('lightbox-use').href = `builder.html?template=${templateName}`;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+    <script src="./js/auth-nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder | Resu-Master</title>
+    <meta name="description" content="Build your professional ATS-friendly resume with live preview, ATS scorer, and one-click PDF export.">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/builder.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar">
+        <div class="container nav__container">
+            <a href="index.html" class="nav__logo">
+                <span class="logo__icon"><i class="uil uil-file-alt"></i></span>
+                <h4>RESU-MASTER</h4>
+            </a>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="template.html">Templates</a></li>
+                <li><a href="builder.html" class="active">Builder</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav__actions">
+                <a href="login.html" class="btn btn-outline-sm">Login</a>
+                <a href="registratin.html" class="btn btn-primary-sm">Sign Up</a>
+            </div>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+
+    <!-- BUILDER MAIN -->
+    <div class="builder-page">
+
+        <!-- STEP PROGRESS BAR -->
+        <div class="builder-topbar">
+            <div class="step-progress">
+                <div class="step-item active" data-step="1">
+                    <div class="step-circle"><i class="uil uil-user"></i></div>
+                    <span>Personal</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="2">
+                    <div class="step-circle"><i class="uil uil-graduation-cap"></i></div>
+                    <span>Education</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="3">
+                    <div class="step-circle"><i class="uil uil-briefcase-alt"></i></div>
+                    <span>Experience</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="4">
+                    <div class="step-circle"><i class="uil uil-star"></i></div>
+                    <span>Skills</span>
+                </div>
+                <div class="step-line"></div>
+                <div class="step-item" data-step="5">
+                    <div class="step-circle"><i class="uil uil-eye"></i></div>
+                    <span>Preview</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN SPLIT LAYOUT -->
+        <div class="builder-layout">
+
+            <!-- LEFT: FORM PANEL -->
+            <div class="form-panel" id="form-panel">
+
+                <!-- STEP 1: Personal Info -->
+                <div class="form-step active" id="step-1">
+                    <div class="form-step-header">
+                        <div class="form-step-icon"><i class="uil uil-user-circle"></i></div>
+                        <div>
+                            <h3>Personal Information</h3>
+                            <p>Your contact details and professional summary</p>
+                        </div>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>First Name *</label>
+                            <input type="text" id="firstName" placeholder="e.g. John" oninput="updatePreview()">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name *</label>
+                            <input type="text" id="lastName" placeholder="e.g. Smith" oninput="updatePreview()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Professional Title *</label>
+                        <input type="text" id="jobTitle" placeholder="e.g. Senior Software Engineer" oninput="updatePreview()">
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="email" placeholder="john@example.com" oninput="updatePreview()">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" oninput="updatePreview()">
+                        </div>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" id="location" placeholder="City, Country" oninput="updatePreview()">
+                        </div>
+                        <div class="form-group">
+                            <label>LinkedIn URL</label>
+                            <input type="url" id="linkedin" placeholder="linkedin.com/in/username" oninput="updatePreview()">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Professional Summary *</label>
+                        <textarea id="summary" rows="4" placeholder="Write 2-4 sentences about your top skills, years of experience, and career goals..." oninput="updatePreview(); updateATS();"></textarea>
+                        <span class="char-count" id="summary-count">0 / 400</span>
+                    </div>
+
+                    <!-- Role Preferences -->
+                    <div class="form-step-header" style="margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
+                        <div class="form-step-icon"><i class="uil uil-bullseye"></i></div>
+                        <div>
+                            <h3>Job Search Preferences (Optional)</h3>
+                            <p>Target a specific role or company style</p>
+                        </div>
+                    </div>
+                    <div class="form-grid-2">
+                        <div class="form-group">
+                            <label>Target Role</label>
+                            <select id="targetRole" onchange="updatePreview(); updateSuggestions();">
+                                <option value="">General / Multiple</option>
+                                <option value="sde">Software Engineer (SDE)</option>
+                                <option value="ds">Data Scientist</option>
+                                <option value="pm">Product Manager (PM)</option>
+                                <option value="marketing">Marketing Specialist</option>
+                                <option value="consultant">Management Consultant</option>
+                                <option value="ib">Investment Banker</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Target Company Style</label>
+                            <select id="targetCompany" onchange="updatePreview(); updateSuggestions();">
+                                <option value="">Standard Professional</option>
+                                <option value="faang">FAANG / Big Tech</option>
+                                <option value="startup">Modern Startup</option>
+                                <option value="mbb">MBB / Consulting</option>
+                                <option value="finance">Wall Street / Finance</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Education -->
+                <div class="form-step" id="step-2">
+                    <div class="form-step-header">
+                        <div class="form-step-icon"><i class="uil uil-graduation-cap"></i></div>
+                        <div>
+                            <h3>Education</h3>
+                            <p>Add your academic background</p>
+                        </div>
+                    </div>
+                    <div id="education-entries">
+                        <div class="entry-card" id="edu-0">
+                            <div class="entry-card-header">
+                                <span>Education 1</span>
+                                <button type="button" class="remove-entry" onclick="removeEntry('edu-0')" style="display:none;"><i class="uil uil-times"></i></button>
+                            </div>
+                            <div class="form-group">
+                                <label>Degree / Qualification</label>
+                                <input type="text" class="edu-degree" placeholder="e.g. Bachelor of Science in Computer Science" oninput="updatePreview()">
+                            </div>
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Institution / University</label>
+                                    <input type="text" class="edu-school" placeholder="e.g. MIT" oninput="updatePreview()">
+                                </div>
+                                <div class="form-group">
+                                    <label>Graduation Year</label>
+                                    <input type="text" class="edu-year" placeholder="e.g. 2022" oninput="updatePreview()">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>GPA / Achievements (optional)</label>
+                                <input type="text" class="edu-gpa" placeholder="e.g. GPA: 3.8 / 4.0 | Dean's List" oninput="updatePreview()">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-entry-btn" onclick="addEducation()">
+                        <i class="uil uil-plus"></i> Add Another Education
+                    </button>
+                </div>
+
+                <!-- STEP 3: Experience -->
+                <div class="form-step" id="step-3">
+                    <div class="form-step-header">
+                        <div class="form-step-icon"><i class="uil uil-briefcase-alt"></i></div>
+                        <div>
+                            <h3>Work Experience</h3>
+                            <p>Add your professional work history</p>
+                        </div>
+                    </div>
+                    <div id="experience-entries">
+                        <div class="entry-card" id="exp-0">
+                            <div class="entry-card-header">
+                                <span>Experience 1</span>
+                                <button type="button" class="remove-entry" onclick="removeEntry('exp-0')" style="display:none;"><i class="uil uil-times"></i></button>
+                            </div>
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Job Title</label>
+                                    <input type="text" class="exp-title" placeholder="e.g. Software Engineer" oninput="updatePreview()">
+                                </div>
+                                <div class="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" class="exp-company" placeholder="e.g. Google" oninput="updatePreview()">
+                                </div>
+                            </div>
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label>Start Date</label>
+                                    <input type="text" class="exp-start" placeholder="e.g. Jan 2021" oninput="updatePreview()">
+                                </div>
+                                <div class="form-group">
+                                    <label>End Date</label>
+                                    <input type="text" class="exp-end" placeholder="e.g. Present" oninput="updatePreview()">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Key Responsibilities & Achievements</label>
+                                <textarea class="exp-desc" rows="4" placeholder="• Led a team of 5 engineers to deliver...&#10;• Increased system performance by 40%...&#10;• Developed and shipped 3 major features..." oninput="updatePreview(); updateATS(); checkQuantification();"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-entry-btn" onclick="addExperience()">
+                        <i class="uil uil-plus"></i> Add Another Experience
+                    </button>
+                </div>
+
+                <!-- STEP 4: Skills -->
+                <div class="form-step" id="step-4">
+                    <div class="form-step-header">
+                        <div class="form-step-icon"><i class="uil uil-star"></i></div>
+                        <div>
+                            <h3>Skills & Expertise</h3>
+                            <p>Add your technical and soft skills</p>
+                        </div>
+                    </div>
+
+                    <div class="skills-section">
+                        <label>Technical Skills</label>
+                        <div class="skill-input-row">
+                            <input type="text" id="skill-input" placeholder="Type a skill and press Enter or click Add" onkeydown="handleSkillKey(event, 'tech')">
+                            <button type="button" class="btn btn-primary" onclick="addSkill('tech')"><i class="uil uil-plus"></i> Add</button>
+                        </div>
+                        <div class="skill-tags" id="tech-skill-tags"></div>
+                    </div>
+
+                    <div class="skills-section" style="margin-top:2rem;">
+                        <label>Soft Skills</label>
+                        <div class="skill-input-row">
+                            <input type="text" id="soft-skill-input" placeholder="Type a soft skill and press Enter" onkeydown="handleSkillKey(event, 'soft')">
+                            <button type="button" class="btn btn-primary" onclick="addSkill('soft')"><i class="uil uil-plus"></i> Add</button>
+                        </div>
+                        <div class="skill-tags" id="soft-skill-tags"></div>
+                    </div>
+
+                    <div class="skills-section" style="margin-top:2rem;">
+                        <label>Languages</label>
+                        <div class="skill-input-row">
+                            <input type="text" id="lang-input" placeholder="e.g. English (Native)" onkeydown="handleSkillKey(event, 'lang')">
+                            <button type="button" class="btn btn-primary" onclick="addSkill('lang')"><i class="uil uil-plus"></i> Add</button>
+                        </div>
+                        <div class="skill-tags" id="lang-skill-tags"></div>
+                    </div>
+
+                    <!-- ATS SCORE -->
+                    <div class="ats-score-card">
+                        <div class="ats-score-header">
+                            <div>
+                                <h4><i class="uil uil-robot"></i> ATS Score</h4>
+                                <p>How likely your resume is to pass ATS filters</p>
+                            </div>
+                            <div class="ats-score-value" id="ats-value">0%</div>
+                        </div>
+                        <div class="ats-bar-track">
+                            <div class="ats-bar-fill" id="ats-bar"></div>
+                        </div>
+                        <div class="ats-checklist" id="ats-checklist">
+                            <div class="ats-check" id="check-name"><i class="uil uil-times-circle"></i> Full Name present</div>
+                            <div class="ats-check" id="check-contact"><i class="uil uil-times-circle"></i> Contact info included</div>
+                            <div class="ats-check" id="check-summary"><i class="uil uil-times-circle"></i> Professional summary written</div>
+                            <div class="ats-check" id="check-exp"><i class="uil uil-times-circle"></i> Work experience added</div>
+                            <div class="ats-check" id="check-skills"><i class="uil uil-times-circle"></i> Skills section filled</div>
+                            <div class="ats-check" id="check-edu"><i class="uil uil-times-circle"></i> Education included</div>
+                            <div class="ats-check" id="check-keywords"><i class="uil uil-times-circle"></i> Action verbs detected</div>
+                            <div class="ats-check" id="check-role-match" style="display:none;"><i class="uil uil-times-circle"></i> Role-specific keywords</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 5: Preview actions -->
+                <div class="form-step" id="step-5">
+                    <div class="form-step-header">
+                        <div class="form-step-icon"><i class="uil uil-check-circle"></i></div>
+                        <div>
+                            <h3>Your Resume is Ready!</h3>
+                            <p>Review, download, or share your finished resume</p>
+                        </div>
+                    </div>
+                    <div class="final-actions">
+                        <button class="final-btn primary" onclick="window.print()">
+                            <i class="uil uil-download-alt"></i>
+                            <div>
+                                <strong>Download as PDF</strong>
+                                <span>Print-quality export</span>
+                            </div>
+                        </button>
+                        <button class="final-btn" onclick="copyResumeText()">
+                            <i class="uil uil-copy"></i>
+                            <div>
+                                <strong>Copy Resume Text</strong>
+                                <span>Paste into any editor</span>
+                            </div>
+                        </button>
+                        <button class="final-btn" onclick="startOver()">
+                            <i class="uil uil-redo"></i>
+                            <div>
+                                <strong>Start Over</strong>
+                                <span>Build a new resume</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="ats-score-card" style="margin-top:2rem;">
+                        <div class="ats-score-header">
+                            <div>
+                                <h4><i class="uil uil-robot"></i> Final ATS Score</h4>
+                                <p>Your resume's ATS compatibility</p>
+                            </div>
+                            <div class="ats-score-value" id="final-ats-value">0%</div>
+                        </div>
+                        <div class="ats-bar-track">
+                            <div class="ats-bar-fill" id="final-ats-bar"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION BUTTONS -->
+                <div class="form-nav-buttons">
+                    <button type="button" class="btn btn-outline" id="prev-btn" onclick="changeStep(-1)">
+                        <i class="uil uil-arrow-left"></i> Back
+                    </button>
+                    <button type="button" class="btn btn-primary" id="next-btn" onclick="changeStep(1)">
+                        Next <i class="uil uil-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT: LIVE RESUME PREVIEW -->
+            <div class="preview-panel" id="preview-panel">
+                <div class="preview-header-bar">
+                    <span><i class="uil uil-eye"></i> Live Preview</span>
+                    <span class="preview-hint">Updates as you type</span>
+                </div>
+                <div class="resume-preview" id="resume-output">
+                    <!-- Resume Header -->
+                    <div class="rv-header">
+                        <h1 id="rv-name">Your Name</h1>
+                        <div class="rv-title" id="rv-title">Your Professional Title</div>
+                        <div class="rv-contact" id="rv-contact">
+                            <span><i class="uil uil-envelope"></i> your@email.com</span>
+                            <span><i class="uil uil-phone"></i> +1 000 000 0000</span>
+                            <span><i class="uil uil-map-marker"></i> City, Country</span>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="rv-section" id="rv-summary-section">
+                        <div class="rv-section-title"><i class="uil uil-align-left"></i> Professional Summary</div>
+                        <p id="rv-summary">Your professional summary will appear here. Describe your skills, experience, and goals in 2-4 sentences.</p>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="rv-section" id="rv-exp-section">
+                        <div class="rv-section-title"><i class="uil uil-briefcase-alt"></i> Work Experience</div>
+                        <div id="rv-experience">
+                            <div class="rv-entry">
+                                <div class="rv-entry-header">
+                                    <div>
+                                        <div class="rv-entry-title">Job Title</div>
+                                        <div class="rv-entry-sub">Company Name</div>
+                                    </div>
+                                    <div class="rv-entry-date">Start – End</div>
+                                </div>
+                                <p class="rv-entry-desc">Your responsibilities and achievements will appear here.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="rv-section" id="rv-edu-section">
+                        <div class="rv-section-title"><i class="uil uil-graduation-cap"></i> Education</div>
+                        <div id="rv-education">
+                            <div class="rv-entry">
+                                <div class="rv-entry-header">
+                                    <div>
+                                        <div class="rv-entry-title">Degree & Field</div>
+                                        <div class="rv-entry-sub">University / Institution</div>
+                                    </div>
+                                    <div class="rv-entry-date">Year</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="rv-section" id="rv-skills-section">
+                        <div class="rv-section-title"><i class="uil uil-star"></i> Skills</div>
+                        <div id="rv-skills">
+                            <p style="color:#999;font-size:0.85rem;">Add your skills on the Skills step to see them appear here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="./js/builder.js"></script>
+    <script src="./js/auth-nav.js"></script>
+</body>
+</html>

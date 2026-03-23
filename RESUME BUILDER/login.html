@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Resu-Master</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        :root {
+            --primary: #6c63ff;
+            --primary-light: #8b85ff;
+            --secondary: #ff6584;
+            --bg: #1a1d33;
+            --bg1: #252847;
+            --bg2: #2e3267;
+            --white: #fff;
+            --light: rgba(255,255,255,0.65);
+            --success: #00bf8e;
+            --danger: #f75842;
+            --gradient: linear-gradient(135deg, #6c63ff, #ff6584);
+            --radius: 0.75rem;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Decorative bg orbs */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(108,99,255,0.15), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 40vw;
+            height: 40vw;
+            background: radial-gradient(circle, rgba(255,101,132,0.12), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .auth-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 900px;
+            width: 95%;
+            background: var(--bg1);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .auth-left {
+            background: var(--gradient);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .auth-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: white;
+        }
+        .auth-logo i { font-size: 1.5rem; }
+        .auth-left-content { text-align: center; }
+        .auth-left-content h2 { font-size: 1.8rem; margin-bottom: 1rem; line-height: 1.3; }
+        .auth-left-content p { opacity: 0.85; font-size: 0.9rem; line-height: 1.7; }
+        .auth-features { display: flex; flex-direction: column; gap: 0.7rem; }
+        .auth-feature { display: flex; align-items: center; gap: 0.7rem; font-size: 0.85rem; opacity: 0.9; }
+        .auth-feature i { font-size: 1.1rem; }
+        .auth-right { padding: 3rem 2.5rem; }
+        .auth-right h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .auth-right p.subtitle { color: var(--light); font-size: 0.9rem; margin-bottom: 2rem; }
+        .form-group { margin-bottom: 1.2rem; position: relative; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--light); margin-bottom: 0.4rem; }
+        .input-wrapper { position: relative; }
+        .input-wrapper i.icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: rgba(255,255,255,0.3); }
+        .input-wrapper input {
+            width: 100%;
+            background: var(--bg2);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            padding: 0.85rem 1rem 0.85rem 2.8rem;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+            transition: var(--transition);
+        }
+        .input-wrapper input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(108,99,255,0.15); }
+        .input-wrapper input::placeholder { color: rgba(255,255,255,0.25); }
+        .toggle-password {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.4);
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        .toggle-password:hover { color: var(--primary-light); }
+        .form-options { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.82rem; }
+        .checkbox-label { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; color: var(--light); }
+        .checkbox-label input { accent-color: var(--primary); width: 14px; height: 14px; }
+        .forgot-link { color: var(--primary-light); text-decoration: none; font-weight: 600; transition: var(--transition); }
+        .forgot-link:hover { color: var(--secondary); }
+        .btn-submit {
+            width: 100%;
+            padding: 0.95rem;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-family: inherit;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(108,99,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(108,99,255,0.5); }
+        .auth-divider { text-align: center; margin: 1.5rem 0; position: relative; color: var(--light); font-size: 0.8rem; }
+        .auth-divider::before, .auth-divider::after { content:''; position:absolute; top:50%; width:42%; height:1px; background:rgba(255,255,255,0.1); }
+        .auth-divider::before { left:0; }
+        .auth-divider::after { right:0; }
+        .auth-switch { text-align: center; font-size: 0.88rem; color: var(--light); }
+        .auth-switch a { color: var(--primary-light); font-weight: 700; text-decoration: none; transition: var(--transition); }
+        .auth-switch a:hover { color: var(--secondary); }
+        .error-msg { display: none; color: var(--danger); font-size: 0.8rem; margin-top: 0.4rem; }
+        @media (max-width: 650px) {
+            .auth-wrapper { grid-template-columns: 1fr; }
+            .auth-left { display: none; }
+            .auth-right { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-left">
+            <a href="index.html" class="auth-logo">
+                <i class="uil uil-file-alt"></i> RESU-MASTER
+            </a>
+            <div class="auth-left-content">
+                <h2>Build Your Career Story</h2>
+                <p>Create a professional resume that gets you noticed. Join thousands of job seekers who found success with Resu-Master.</p>
+            </div>
+            <div class="auth-features">
+                <div class="auth-feature"><i class="uil uil-check-circle"></i> ATS-optimized templates</div>
+                <div class="auth-feature"><i class="uil uil-check-circle"></i> Real-time resume preview</div>
+                <div class="auth-feature"><i class="uil uil-check-circle"></i> One-click PDF download</div>
+                <div class="auth-feature"><i class="uil uil-check-circle"></i> 50+ professional designs</div>
+            </div>
+        </div>
+        <div class="auth-right">
+            <h2>Welcome Back 👋</h2>
+            <p class="subtitle">Sign in to access your resumes and continue building your career.</p>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="uil uil-envelope icon"></i>
+                        <input type="email" id="login-email" placeholder="your@email.com" autocomplete="email">
+                    </div>
+                    <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-wrapper">
+                        <i class="uil uil-lock icon"></i>
+                        <input type="password" id="login-password" placeholder="Enter your password" autocomplete="current-password">
+                        <button type="button" class="toggle-password" onclick="togglePass('login-password', this)">
+                            <i class="uil uil-eye"></i>
+                        </button>
+                    </div>
+                    <span class="error-msg" id="pass-error">Password is required.</span>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="remember-me"> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <i class="uil uil-signin"></i> Sign In
+                </button>
+            </form>
+            <div class="auth-divider">or</div>
+            <p class="auth-switch">Don't have an account? <a href="registratin.html">Sign up free</a></p>
+        </div>
+    </div>
+
+    <script>
+        function togglePass(inputId, btn) {
+            const input = document.getElementById(inputId);
+            const isPass = input.type === 'password';
+            input.type = isPass ? 'text' : 'password';
+            btn.querySelector('i').className = isPass ? 'uil uil-eye-slash' : 'uil uil-eye';
+        }
+
+        function showError(id, msg) {
+            const el = document.getElementById(id);
+            el.textContent = msg;
+            el.style.display = 'block';
+        }
+        function clearError(id) { document.getElementById(id).style.display = 'none'; }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailRaw = document.getElementById('login-email').value.trim();
+            // Email match is case-insensitive (normalised to lowercase)
+            const email = emailRaw.toLowerCase();
+            // Password is CASE-SENSITIVE — compared exactly as typed
+            const pass = document.getElementById('login-password').value;
+            let valid = true;
+
+            clearError('email-error');
+            clearError('pass-error');
+
+            // Basic email format check
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showError('email-error', 'Please enter a valid email address.');
+                valid = false;
+            }
+            if (!pass) {
+                showError('pass-error', 'Password is required.');
+                valid = false;
+            }
+            if (!valid) return;
+
+            // ---- Look up registered users (case-sensitive password) ----
+            const users = JSON.parse(localStorage.getItem('rm_users') || '{}');
+            const user = users[email];
+
+            if (!user) {
+                showError('email-error', 'No account found with this email. Please sign up.');
+                return;
+            }
+            // Exact (case-sensitive) password comparison
+            if (user.password !== pass) {
+                showError('pass-error', 'Incorrect password. Passwords are case-sensitive.');
+                return;
+            }
+
+            // ---- Login success ----
+            const session = { name: user.name, email: email, loggedAt: Date.now() };
+            localStorage.setItem('rm_session', JSON.stringify(session));
+
+            // Remember me
+            if (document.getElementById('remember-me').checked) {
+                localStorage.setItem('rm_remember', email);
+            }
+
+            showToast('Welcome back, ' + user.name + '! 🎉');
+            setTimeout(() => { window.location.href = 'index.html'; }, 1200);
+        });
+
+        // Pre-fill if remembered
+        window.addEventListener('DOMContentLoaded', () => {
+            const remembered = localStorage.getItem('rm_remember');
+            if (remembered) document.getElementById('login-email').value = remembered;
+        });
+
+        function showToast(msg) {
+            const t = document.createElement('div');
+            t.textContent = msg;
+            t.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#6c63ff,#ff6584);color:#fff;padding:0.8rem 1.8rem;border-radius:2rem;font-size:0.9rem;font-weight:600;z-index:9999;font-family:Montserrat,sans-serif;box-shadow:0 4px 20px rgba(108,99,255,0.5);';
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 3500);
+        }
+    </script>
+</body>
+</html>
